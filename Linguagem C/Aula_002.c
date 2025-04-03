@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <locale.h>
 
-int main() {
+int main() { 
     // Acentuação
-    setlocale(LC_ALL,NULL);
+    setlocale(LC_ALL, "Portuguese_Portugal.utf8");
 
     // Declaração de variaveis
     int valor1, valor2, soma;
