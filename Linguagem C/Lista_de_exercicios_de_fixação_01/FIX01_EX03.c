@@ -25,6 +25,6 @@ int main() {
     temperatura_fahrenheit = (temperatura_celsius * 9 / 5) + 32;
     
     //Saida
-    printf("Para a temperatura de %f° Celsius, a temperatura em Fahrenheit é %f", temperatura_celsius, temperatura_fahrenheit);
+    printf("Para a temperatura de %.2f° Celsius, a temperatura em Fahrenheit é %.2f", temperatura_celsius, temperatura_fahrenheit);
     return 0;
 }
