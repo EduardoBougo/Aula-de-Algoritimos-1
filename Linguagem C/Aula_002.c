@@ -2,14 +2,14 @@
 #include <locale.h>
 
 int main() { 
-    // AcentuaÃ§Ã£o
-    setlocale(LC_ALL, "Portuguese_Portugal.utf8");
+    //Acentuação
+    setlocale(LC_ALL, "Portuguese_Brazil");
 
-    // DeclaraÃ§Ã£o de variaveis
+    // Declaração de variaveis
     int valor1, valor2, soma;
 
     // Entrada
-    printf("Vamos somar dois nÃºmeros:\n");
+    printf("Vamos somar dois números:\n");
     printf("\nDigite o valor1: ");
     scanf("%d", &valor1);
     printf("\nDigite o valor2: ");
@@ -18,7 +18,7 @@ int main() {
     // Processamento
     soma = valor1 + valor2;
 
-    // SaÃ­da
-    printf("\nA soma dos valores %d e %d Ã© igual a %d", valor1, valor2, soma);
+    // Saída
+    printf("\nA soma dos valores %d e %d é igual a %d", valor1, valor2, soma);
     return 0;
 }

@@ -10,10 +10,10 @@ Enunciado:
 #include<locale.h>
 
 int main() {
-    //AcentuaÃ§Ã£o
+    //Acentuação
     setlocale(LC_ALL, "Portuguese_Brazil");
     
-    // DeclaraÃ§Ã£o de variaveis
+    // Declaração de variaveis
     // Entrada
     // Processamento
     //Saida
