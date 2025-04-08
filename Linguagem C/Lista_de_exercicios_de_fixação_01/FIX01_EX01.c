@@ -25,7 +25,7 @@ int main() {
     printf("Digite sua idade em anos:");
     scanf("%d", &idade);
     
-    //Saida
+    // Saida
     printf("Legal! Você tem %d anos!", idade);
     return 0;
 }

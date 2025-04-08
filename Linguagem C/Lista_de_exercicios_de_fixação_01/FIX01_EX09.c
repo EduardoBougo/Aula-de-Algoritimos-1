@@ -3,10 +3,10 @@ Nome..: Eduardo Camargo Bougo
 Truma.: EC41F Algoritos 1
 Data..: 08/04/2025
 Enunciado:
-    Elabore um programa em Linguagem C para obter do usuário a velocidade em quilómetros por hora (km/h) e informar a mesma velocidade em metros por segundo (m/s).
+    Elabore um programa em Linguagem C para obter do usuário a velocidade em quilômetros por hora (km/h) e informar a mesma velocidade em metros por segundo (m/s).
     Casos de teste:
-    a) A velocidade de 72 Km/h corresponde á  velocidade de 20 m/s;
-    b) A velocidade de 180 Km/h corresponde á  velocidade de 50 m/s.
+    a) A velocidade de 72 Km/h corresponde à velocidade de 20 m/s;
+    b) A velocidade de 180 Km/h corresponde à velocidade de 50 m/s.
 */
 
 #include<stdio.h>

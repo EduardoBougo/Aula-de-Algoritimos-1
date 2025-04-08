@@ -28,7 +28,7 @@ int main() {
     // Processamento
     idade = Ano_atual - Ano_nascimento;
 
-    //Saida
+    // Saida
     printf("Para o ano %d, a provável idade é %d", Ano_nascimento, idade);
     return 0;
 }

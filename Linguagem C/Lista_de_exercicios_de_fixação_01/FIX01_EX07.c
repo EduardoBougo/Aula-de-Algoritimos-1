@@ -3,16 +3,16 @@ Nome..: Eduardo Camargo Bougo
 Truma.: EC41F Algoritos 1
 Data..: 07/04/2025
 Enunciado:
-    FaÃ§a um programa em Linguagem C para calcular a mÃ©dia ponderada de trÃªs notas de um aluno considerando os pesos 2, 3 e 5, respectivamente para a primeira, segunda e terceira nota.
+    Faça um programa em Linguagem C para calcular a média ponderada de três notas de um aluno considerando os pesos 2, 3 e 5, respectivamente para a primeira, segunda e terceira nota.
     Casos de teste:
-    a) Para as notas 5,0,   4,5   e   9,5, a mÃ©dia ponderada Ã© 7,1;
-    b) Para as notas 10,0,   4,0   e   7,5, a mÃ©dia ponderada Ã© 6,95.
+    a) Para as notas 5,0,   4,5   e   9,5, a média ponderada é 7,1;
+    b) Para as notas 10,0,   4,0   e   7,5, a média ponderada é 6,95.
 */
 
 #include<stdio.h>
 
 int main() {
-    // DeclaraÃ§Ã£o de variaveis
+    // Declaração de variaveis
     float nota_1 = 0,
         nota_2 = 0,
         nota_3 = 0,
@@ -31,8 +31,8 @@ int main() {
     // Processamento
     media_ponderada = ( (nota_1 * peso_nota_1) + (nota_2 * peso_nota_2) + (nota_3 * peso_nota_3) ) / (peso_nota_1 + peso_nota_2 + peso_nota_3);
 
-    //Saida
-    printf("Para as notas %.1f, %.1f e %.1f, a media ponderada Ã© %.1f", nota_1, nota_2, nota_3, media_ponderada);
+    // Saida
+    printf("Para as notas %.1f, %.1f e %.1f, a media ponderada é %.1f", nota_1, nota_2, nota_3, media_ponderada);
 
     return 0;
 }

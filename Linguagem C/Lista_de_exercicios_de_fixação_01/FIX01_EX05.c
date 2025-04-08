@@ -36,7 +36,7 @@ int main() {
     icms_aplicado = preco_carro_montadora * icms;
     preco_final = preco_carro_montadora + lucro_aplicado + ipi_aplicado + icms_aplicado;
 
-    //Saida
+    // Saida
     //printf(" Para o preço da montadora igual a R$ %.2f, o preço de venda é R$ %.2f,  o lucro é R$ %.2f, o IPI é R$ %.2f e o ICMS é R$ %.2f", preco_carro_montadora, preco_final, lucro_aplicado, ipi_aplicado, icms_aplicado);
     printf("\n| IPI.........: R$ %10.2f |", ipi);
     printf("\n| ICMS........: R$ %10.2f |", icms);

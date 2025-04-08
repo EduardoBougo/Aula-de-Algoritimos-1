@@ -28,7 +28,7 @@ int main() {
     // Processamento
     area_do_circulo = raio_circuferencia * raio_circuferencia * pi;
 
-    //Saida
+    // Saida
     printf("Para o raio de %.2f cm, a área do círculo será %.2f.", raio_circuferencia, area_do_circulo);
     return 0;
 }

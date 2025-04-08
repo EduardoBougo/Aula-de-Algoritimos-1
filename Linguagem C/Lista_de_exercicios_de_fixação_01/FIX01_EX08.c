@@ -3,16 +3,16 @@ Nome..: Eduardo Camargo Bougo
 Truma.: EC41F Algoritos 1
 Data..: 07/04/2025
 Enunciado:
-    Similar ao exercÃ­cio anterior mas receba tambÃ©m os pesos para cada uma das notas.
+    Similar ao exercício anterior mas receba também os pesos para cada uma das notas.
     Casos de teste:
-    a) Para as notas 5,0 (peso 3,0), 4,5 (peso 3,0) e 9,5 (peso 4,0), a mÃ©dia ponderada Ã© 6,65;
-    b) Para as notas 9,0 (peso 2,0), 8,3 (peso 3,0) e 6,5 (peso 5,0), a mÃ©dia ponderada Ã© 7,54.
+    a) Para as notas 5,0 (peso 3,0), 4,5 (peso 3,0) e 9,5 (peso 4,0), a média ponderada é 6,65;
+    b) Para as notas 9,0 (peso 2,0), 8,3 (peso 3,0) e 6,5 (peso 5,0), a média ponderada é 7,54.
 */
 
 #include<stdio.h>
 
 int main() {
-    // DeclaraÃ§Ã£o de variaveis
+    // Declaração de variaveis
     float nota_1 = 0,
         peso_nota_1 = 0,
         nota_2 = 0,
@@ -46,8 +46,8 @@ int main() {
     soma_dos_pesos = (peso_nota_1 + peso_nota_2 + peso_nota_3);
     media_ponderada = ( (nota_1 * peso_nota_1) + (nota_2 * peso_nota_2) + (nota_3 * peso_nota_3) ) / soma_dos_pesos;
 
-    //Saida
-    printf("Para as notas %.1f (Peso %.1f), %.1f (Peso %.1f) e %.1f (Peso %.1f), a media ponderada Ã© %.2f", nota_1, peso_nota_1, nota_2, peso_nota_2, nota_3, peso_nota_3, media_ponderada);
+    // Saida
+    printf("Para as notas %.1f (Peso %.1f), %.1f (Peso %.1f) e %.1f (Peso %.1f), a media ponderada é %.2f", nota_1, peso_nota_1, nota_2, peso_nota_2, nota_3, peso_nota_3, media_ponderada);
 
     return 0;
 }
