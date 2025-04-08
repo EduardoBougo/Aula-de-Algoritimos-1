@@ -7,8 +7,12 @@ Enunciado:
 */
 
 #include<stdio.h>
+#include<locale.h>
 
 int main() {
+    //Acentuação
+    setlocale(LC_ALL, "Portuguese_Brazil");
+    
     // Declaração de variaveis
     // Entrada
     // Processamento
