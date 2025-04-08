@@ -16,6 +16,6 @@ int main() {
     // Declaração de variaveis
     // Entrada
     // Processamento
-    //Saida
+    // Saida
     return 0;
 }
