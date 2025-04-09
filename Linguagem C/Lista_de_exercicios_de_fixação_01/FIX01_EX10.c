@@ -3,10 +3,10 @@ Nome..: Eduardo Camargo Bougo
 Truma.: EC41F Algoritos 1
 Data..: 07/04/2025
 Enunciado:
-    Elabore um programa em Linguagem C para calcular a distância entre dois pontos, ??(x1, y1) e ??(x2, y2), por meio da fórmula:
+    Elabore um programa em Linguagem C para calcular a distância entre dois pontos, A(x1, y1) e B(x2, y2), por meio da fórmula:
     Casos de teste:
-    a) Dados os pontos A(1, 1) e B(3, 1), ??AB é igual a 2;
-    b) Dados os pontos A(-3, -11) e B(2, 1), ??AB é igual a 13. 
+    a) Dados os pontos A(1, 1) e B(3, 1), dAB é igual a 2;
+    b) Dados os pontos A(-3, -11) e B(2, 1), dAB é igual a 13. 
 */
 
 #include<stdio.h>
