@@ -23,9 +23,9 @@ int main() {
         altura_triangulo = 0,
         area_triangulo = 0,
         raio_circuferencia = 0,
-        area_circuferencia = 0,
         aresta_cubo = 0,
         area_cubo;
+    float area_circuferencia = 0;
 
     // Entrada
     printf("\n====================================\n");
@@ -62,10 +62,10 @@ int main() {
             scanf("%d", &raio_circuferencia);
 
             // Processamento
-            area_circuferencia = 3,14 * (raio_circuferencia * raio_circuferencia);
+            area_circuferencia = 3.14 * (raio_circuferencia * raio_circuferencia);
 
             // Saida
-            printf("\nO resultado da area da circuferencia e de: %d", area_circuferencia);
+            printf("\nO resultado da area da circuferencia e de: %f", area_circuferencia);
 
         }
         else {
@@ -80,7 +80,7 @@ int main() {
                 area_cubo = 6 * (aresta_cubo * aresta_cubo);
 
                 // Saida
-                printf("\nO resultado da area docubo e de: %d", area_cubo);
+                printf("\nO resultado da area do cubo e de: %d", area_cubo);
 
             }
             else {
