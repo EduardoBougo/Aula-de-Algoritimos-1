@@ -47,12 +47,12 @@ int main() {
             }
             else {
                 //Equilatero
-                if (lado_A == lado_B == lado_C) {
+                if ((lado_A == lado_B) && (lado_A == lado_C) && (lado_B == lado_C)) {
                     printf("Equilatero");
                 }
                 //Isósceles
                 else {
-                    printf("Isóceles")
+                    printf("Isóceles");
                 }
             }
             
@@ -62,7 +62,7 @@ int main() {
     }
 
     // Saida
-
+    printf("\nFim do codigo!\n");
 
     return 0;
 }
