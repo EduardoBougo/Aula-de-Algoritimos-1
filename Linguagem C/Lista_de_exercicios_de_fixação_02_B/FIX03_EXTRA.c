@@ -28,37 +28,40 @@ int main() {
         lado_C = 0;
 
     // Entrada
-    printf("Digite o tamanho do lado A do triângulo: ");
+    printf("\nDigite o tamanho do lado A do triângulo: ");
     scanf("%d", &lado_A);
-    printf("Digite o tamanho do lado B do triângulo: ");
+    printf("\nDigite o tamanho do lado B do triângulo: ");
     scanf("%d", &lado_B);
-    printf("Digite o tamanho do lado C do triângulo: ");
+    printf("\nDigite o tamanho do lado C do triângulo: ");
     scanf("%d", &lado_C);
 
     // Processamento
-
+    printf("\n\nPara os valores %d, %d e %d, Valores ", lado_A, lado_B, lado_C);
     //Lados maiores que 0
     if (lado_A > 0 && lado_B > 0 && lado_C > 0) {
         //Condição de existencia
         if ((lado_A < lado_B + lado_C) && (lado_B < lado_A + lado_C) && (lado_C < lado_A + lado_B)){
             //Escaleno
             if ((lado_A != lado_B) && (lado_A != lado_C) && (lado_B != lado_C)) {
-                printf("Escaleno");
+                printf("representam um triângulo Escaleno!\n");
             }
             else {
                 //Equilatero
                 if ((lado_A == lado_B) && (lado_A == lado_C) && (lado_B == lado_C)) {
-                    printf("Equilatero");
+                    printf("representam um triângulo Equilatero!\n");
                 }
                 //Isósceles
                 else {
-                    printf("Isóceles");
+                    printf("representam um triângulo Isóceles!\n");
                 }
             }
-            
-
-
         }
+        else {
+            printf("NÃO representão os lados de um triângulo!\n");
+        }
+    }
+    else {
+        printf("\nValores digitados não permitidos.\n")
     }
 
     // Saida
