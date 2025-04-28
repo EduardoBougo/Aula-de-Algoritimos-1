@@ -1,4 +1,10 @@
 #include<stdio.h>
 int main () {
-printf ("%s%d%%", "Juros de ", 10);
+    int a = 0,
+        i = 1;
+    while (a == 0) {
+        printf("%d\n", i++);
+
+    }
+    return 0;
 }
