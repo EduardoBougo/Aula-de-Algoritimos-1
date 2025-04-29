@@ -1,9 +1,9 @@
 /*
 Nome..: Eduardo Camargo Bougo
 Truma.: EC41F Algoritos 1
-Data..: 00/04/2025
+Data..: 29/04/2025
 Enunciado:
-    Faça um programa em Linguagem C que receba um número do usuário e apresente a fase "Seja bem vindo", tantas vezes quanto for esse número. Um frase por linha.
+    Faça um programa em Linguagem C que receba 5número do usuário. A cada número lido imprima na tela se ele é ou não múltiplo de 3.
 */
 
 #include<stdio.h>
@@ -17,14 +17,22 @@ int main() {
     int cont = 1,
         num = 0;
 
-    // Entrada
-    printf("Digite um valor: ");
-    scanf("%d", &num);
-    
-    // Processamento e Saida
-    while (cont <= num) {
-        printf("%d) Seja bem vindo.\n", cont++);
-    }
+            while (cont <= 5) {
+                // Entrada
+                printf("\n====================");
+                printf("\nDigite um valor: ");
+                scanf("%d", &num);
+                // Processamento
+                if (num % 3 == 0) {
+                    printf("\nO número %d é múltiplo de 3.\n", num);
+                }
+                else {
+                    printf("\nO número %d não é multiplo de 3.\n", num);
+                }
+                cont++;
+                // Saida
+            }
+
 
     return 0;
 }
