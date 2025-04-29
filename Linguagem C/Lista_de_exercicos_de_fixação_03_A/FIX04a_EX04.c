@@ -14,15 +14,17 @@ int main() {
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
-    int cont = 0,
+    int cont = 1,
         num = 0;
 
     // Entrada
     printf("Digite um valor: ");
-    scanf("%d", &cont)
+    scanf("%d", &num);
     
     // Processamento e Saida
-    while (cont)
+    while (cont <= num) {
+        printf("%d) Seja bem vindo.\n", cont++);
+    }
 
     return 0;
 }
