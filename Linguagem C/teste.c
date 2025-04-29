@@ -1,10 +1,7 @@
 #include<stdio.h>
 int main () {
-    int a = 0,
-        i = 1;
-    while (a == 0) {
-        printf("%d\n", i++);
-
-    }
+    float cont  = 0;
+    cont++;
+    printf("%f", cont);
     return 0;
 }
