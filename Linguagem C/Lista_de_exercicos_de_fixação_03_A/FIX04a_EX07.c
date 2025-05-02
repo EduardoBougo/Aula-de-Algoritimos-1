@@ -32,7 +32,7 @@ int main() {
     }
     media = soma / (cont - 1);
     // Saida
-    printf("A média dos alunos foi de %.2f", media);
+    printf("\nA média dos alunos foi de %.2f\n", media);
 
     return 0;
 }
