@@ -15,16 +15,29 @@ int main() {
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
-    
+    int cont = 1,
+        num = 0;    
 
-    // Entrada
 
-
-    // Processamento
-
+    do {
+        // Entrada
+        printf("\n\nDigite um número: ");
+        scanf("%d", &num);
+        
+        // Processamento e Saida
+        printf("============================================");
+        if ((num % 3) == 0) {
+            printf("\n...O número >> %d << é multiplo de 3...\n", num);
+        }
+        else {
+            printf("\n...O número >> %d << não é multiplo de 3...\n", num);
+        }
+        printf("============================================");
+        cont++;
+    } while (cont <= 5);
 
     // Saida
-
     printf("\nFim do código\n");
+
     return 0;
 }
