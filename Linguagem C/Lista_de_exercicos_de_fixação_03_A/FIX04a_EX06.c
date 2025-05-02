@@ -23,7 +23,7 @@ int main() {
 
     // Processamento e Saida
     while (cont <= 10) {
-        printf("\n%d x %2d = %3d", tab, cont, (cont * tab));
+        printf("\n  |  %d x %2d = %3d  |", tab, cont, (cont * tab));
         cont ++;
     }
 
