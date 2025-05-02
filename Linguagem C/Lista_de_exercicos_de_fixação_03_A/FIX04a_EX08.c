@@ -14,13 +14,27 @@ int main() {
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
-    int cont = 0;
-    float num = 0
-    // Processamento e Saida
-    while (cont != 0 ) {
-        print("Digite um valor: ");
-        scanf("%f", )
+    float num = 0,
+        menor_num = 0;
+
+    //primeiro numero == menor numero
+    printf("\nDigite um valor [Digite 0 caso queira parar]: ");
+    scanf("%f", &num);
+    menor_num = num;
+
+    // Processamento
+    while (num != 0 ) {
+        printf("\nDigite um valor [Digite 0 caso queira parar]: ");
+        scanf("%f", &num);
+        if ((num != 0) && (num < menor_num)) {
+            menor_num = num;
+        }
     }
+
+    //Saida
+    printf("\n\n================================================\n");
+    printf("\nO menor número digitado foi >>> %f <<<\n", menor_num);
+    printf("\n================================================\n");
 
     return 0;
 }
