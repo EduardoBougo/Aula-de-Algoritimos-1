@@ -17,5 +17,6 @@ int main() {
     // Entrada
     // Processamento
     // Saida
+    printf("\nFim do código\n");
     return 0;
 }
