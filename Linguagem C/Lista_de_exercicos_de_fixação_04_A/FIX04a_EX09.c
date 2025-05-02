@@ -4,7 +4,6 @@ Truma.: EC41F Algoritos 1
 Data..: 02/05/2025
 Enunciado:
     Faça um programa em Linguagem C que receba idade e o peso de sete pessoas. Calcule e mostre: i) a quantidade de pessoas com mais de 90 quilos; ii) a média das idades das pessoas.
-    Usando Do-While
 */
 
 #include<stdio.h>
@@ -22,8 +21,7 @@ int main() {
     float peso = 0,
         soma_idade = 0;
 
-
-    do
+    while (cont <= 7)
     {
         // Entrada
         printf("\n=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=\n");
@@ -42,8 +40,7 @@ int main() {
         }
         
         cont++;
-    } while (cont <= 7);
-    
+    }
 
     // Saida
     printf("\n\nDentre as pessoas cadatradas, %d pessoas tem mais de 90 quilos, e a média das idades das pessoas é %f anos.\n", quilos_90_mais, (soma_idade / (cont - 1)));
@@ -52,5 +49,3 @@ int main() {
 
     return 0;
 }
-
-
