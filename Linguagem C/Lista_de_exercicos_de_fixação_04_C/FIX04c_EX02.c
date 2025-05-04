@@ -18,9 +18,10 @@ int main() {
     int cont = 10;
 
     // Processamento e Saida
-    while(cont > 0) {
-        printf("%d - ", cont--);
-
+    for (cont = 10; cont > 0; cont--)
+    {
+        printf("%d - ", cont);
     }
+    
     return 0;
 }
