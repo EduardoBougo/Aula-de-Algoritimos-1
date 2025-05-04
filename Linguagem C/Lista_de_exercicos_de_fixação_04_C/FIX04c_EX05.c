@@ -23,9 +23,10 @@ int main() {
     scanf("%d", &num);
     
     // Processamento e Saida
-    while (cont <= num) {
-        printf("%d) Seja bem vindo.\n", cont++);
+    for (cont = 1; cont <= num; cont++)
+    {
+        printf("%d) Seja bem vindo.\n", cont);
     }
-
+    
     return 0;
 }
