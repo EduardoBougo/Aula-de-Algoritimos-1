@@ -23,9 +23,9 @@ int main() {
     scanf("%d", &tab);
 
     // Processamento e Saida
-    while (cont <= 10) {
+    for (cont = 0; cont <= 10; cont++)
+    {
         printf("\n  |  %d x %2d = %3d  |", tab, cont, (cont * tab));
-        cont ++;
     }
 
     return 0;
