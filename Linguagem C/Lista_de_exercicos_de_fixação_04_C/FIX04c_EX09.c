@@ -22,7 +22,7 @@ int main() {
     float peso = 0,
         soma_idade = 0;
 
-    while (cont <= 7)
+    for (cont = 1; cont <= 7; cont++)
     {
         // Entrada
         printf("\n=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=\n");
@@ -39,8 +39,6 @@ int main() {
         {
             quilos_90_mais++;
         }
-        
-        cont++;
     }
 
     // Saida
