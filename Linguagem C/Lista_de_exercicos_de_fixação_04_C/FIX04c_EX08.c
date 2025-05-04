@@ -24,14 +24,15 @@ int main() {
     menor_num = num;
 
     // Processamento
-    while (num != 0 ) {
+    for (; num != 0;)
+    {
         printf("\nDigite um valor [Digite 0 caso queira parar]: ");
         scanf("%f", &num);
         if ((num != 0) && (num < menor_num)) {
             menor_num = num;
         }
     }
-
+    
     //Saida
     if (menor_num == 0) {
         printf("\n\n================================================\n");
