@@ -15,14 +15,14 @@ int main() {
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
-    int cont = 1;
+    int cont = 0;
 
     // Processamento e Saida
-    while (cont <= 100) {
+    for (cont = 0; cont <= 100; cont++)
+    {
         if ((cont % 3) == 0){
             printf("%d - ", cont);
         }
-    cont++;
     }
 
     return 0;
