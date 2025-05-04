@@ -21,16 +21,16 @@ int main() {
         nota,
         soma = 0;
 
-    while (cont <= 8) {
+    for (cont = 1; cont <= 8; cont++)
+    {
         // Entrada
         printf("Digite a nota do aluno %d: ", cont);
         scanf("%f", &nota);
 
         // Processamento
         soma += nota;
-
-        cont++;
     }
+    
     media = soma / (cont - 1);
     // Saida
     printf("\nA média dos alunos foi de %.2f\n", media);
