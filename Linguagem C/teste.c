@@ -2,15 +2,17 @@
  
 int main() {
  
-    int X = 0;
-    float Y = 0;
+    int num= 0,
+        i = 1;
+        
+    scanf("%d", &num);
     
-    scanf("%d", &X);
-    scanf("%f", &Y);
-    
-    printf("%.3f km/l", (X/Y));
-    
-
-    
+    while (i <= 6){
+        if(num % 2 == 1){
+            printf("%d\n", num);
+            i++;
+        }
+        num++;
+    }
     return 0;
 }
