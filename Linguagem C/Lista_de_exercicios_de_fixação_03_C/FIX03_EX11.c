@@ -14,7 +14,7 @@ int main() {
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
-    int menu;
+    int menu = 0;
 
     // Entrada
     printf("\n=============================================================\n");
