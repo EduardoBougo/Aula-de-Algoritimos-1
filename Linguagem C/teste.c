@@ -1,18 +1,11 @@
 #include <stdio.h>
  
 int main() {
- 
-    int num= 0,
-        i = 1;
-        
-    scanf("%d", &num);
-    
-    while (i <= 6){
-        if(num % 2 == 1){
-            printf("%d\n", num);
-            i++;
-        }
-        num++;
-    }
+    int i = 0,
+        j = 0;
+
+    for ( i = 0, j = 0; i < 10; i++ ) 
+         for ( ; j < 10; j++ ) 
+               printf("%d", ( i + j ));
     return 0;
 }
