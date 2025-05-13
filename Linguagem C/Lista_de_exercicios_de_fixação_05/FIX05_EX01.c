@@ -11,15 +11,27 @@ Enunciado:
 
 #include<stdio.h>
 #include<locale.h>
+#define TAM 6
 
 int main() {
     //Acentuação
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
+    int num [TAM],
+        i = 0;
+
     // Entrada
-    // Processamento
-    // Saida
+    for (i = 0; i < TAM; i++) {
+        printf("Digite um numero: ");
+        scanf("%d", &num[i]);
+    }
+
+    // Processamento e Saida
+    for(i = TAM-1; i >= 0; i--){
+        printf("%d ", num[i]);
+    }
+
     printf("\nFim do código\n");
     return 0;
 }
