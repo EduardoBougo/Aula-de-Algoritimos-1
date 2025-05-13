@@ -18,15 +18,40 @@ Enunciado:
 
 #include<stdio.h>
 #include<locale.h>
+#define TAM 5
 
 int main() {
     //Acentuação
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
+    int num[TAM],
+        ultimo_num = 0,
+        primeiro_num = 0,
+        i = 0;
+
     // Entrada
-    // Processamento
-    // Saida
+    for (i = 0; i < TAM; i++) {
+        printf("Digite um numero: ");
+        scanf("%d", &num[i]);
+    }
+
+    // Processamento e Saida
+    primeiro_num = num[0];
+    ultimo_num = num[TAM-1];
+
+    printf("\nOriginal....:");
+    for(i = 0; i < TAM; i++){
+        printf("%d ", num[i]);
+    }
+
+    num[0] = ultimo_num;
+    num[TAM-1] = primeiro_num;
+    printf("\nAlterado....:");
+        for(i = 0; i < TAM; i++){
+        printf("%d ", num[i]);
+    }
+
     printf("\nFim do código\n");
     return 0;
 }
