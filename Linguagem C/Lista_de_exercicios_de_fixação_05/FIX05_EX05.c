@@ -46,11 +46,12 @@ int main() {
     }
 
     // Saida
-    printf("\nSaída: ");
+    printf("\n==========================================\n");
+    printf("Saída: ");
     for(i = 0; i < TAM; i++){
         printf("%d ", num[i]);
     }
-
+    printf("\n==========================================\n");
     printf("\nFim do código\n");
     return 0;
 }
