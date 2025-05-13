@@ -26,8 +26,7 @@ int main() {
     
     // Declaração de variaveis
     int num[TAM],
-        ultimo_num = 0,
-        primeiro_num = 0,
+        aux = 0,
         i = 0;
 
     // Entrada
@@ -37,16 +36,14 @@ int main() {
     }
 
     // Processamento e Saida
-    primeiro_num = num[0];
-    ultimo_num = num[TAM-1];
-
     printf("\nOriginal....:");
     for(i = 0; i < TAM; i++){
         printf("%d ", num[i]);
     }
 
-    num[0] = ultimo_num;
-    num[TAM-1] = primeiro_num;
+    aux = num[0];
+    num[0] = num[TAM -1];
+    num[TAM-1] = aux;
     printf("\nAlterado....:");
         for(i = 0; i < TAM; i++){
         printf("%d ", num[i]);
