@@ -16,15 +16,36 @@ Enunciado:
 
 #include<stdio.h>
 #include<locale.h>
+#define TAM 5
 
 int main() {
     //Acentuação
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
+    int num[TAM],
+        maior_num = 0,
+        i = 0;
+
     // Entrada
-    // Processamento
+    for (i = 0; i < TAM; i++) {
+        printf("Digite um numero: ");
+        scanf("%d", &num[i]);
+    }
+
+    // Processamento 
+    maior_num = num[0];
+
+    for (i = 0; i < TAM; i++) {
+        if (num[i] > maior_num) {
+            maior_num = num[i];
+        }
+    }
+
     // Saida
+    printf("\n==========================================\n");
+    printf("O maior número digitado foi %d", maior_num);
+    printf("\n==========================================\n");
     printf("\nFim do código\n");
     return 0;
 }
