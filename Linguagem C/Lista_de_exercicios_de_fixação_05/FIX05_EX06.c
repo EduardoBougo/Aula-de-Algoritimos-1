@@ -1,7 +1,7 @@
 /*
 Nome..: Eduardo Camargo Bougo
 Truma.: EC41F Algoritos 1
-Data..: 13/05/2025
+Data..: 15/05/2025
 Enunciado:
     Faça um programa em Linguagem C que peça 5 números reais. Depois, o programa deve apresentar a média. Por último, o programa deve procurar qual número digitado é o mais próximo da média e apresentá-lo na tela.
     Casos de teste (ignore os _ ):
@@ -25,34 +25,43 @@ int main() {
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
-    int num[TAM],
-        i = 0,
-        soma = 0;
+    float num[TAM],
+        num_prox = 0,
+        diferenca = 0,
+        menor_diferenca,
+        soma = 0,
+        media = 0;
 
-    float media = 0;
-
+    int i = 0;
 
     // Entrada
     for (i = 0; i < TAM; i++) {
         printf("Digite um numero: ");
-        scanf("%d", &num[i]);
+        scanf("%f", &num[i]);
+        soma += num[i];
     }
 
     // Processamento
-    //corrigir
     media = soma / TAM;
-    for(j = 0; j < TAM-1; j++){
-        for(i = (j + 1); i < TAM; i++){
-            if(num[i] < num[j]){
-                aux = num[j];
-                num[j] = num[i];
-                num[i] = aux;
-            }
+    menor_diferenca = soma;
+
+    for (i = 0; i < TAM; i++) {
+        if(media < num[i]){
+            diferenca = num[i] - media;
+        }
+        else{
+            diferenca = media - num[i];
+        }
+        
+        if(diferenca < menor_diferenca){
+            num_prox = num[i];
+            menor_diferenca = diferenca;
         }
     }
 
     // Saida
-
+    printf("\nMédia.......: %.2f", media);
+    printf("\nMais próximo: %.2f", num_prox);
 
     printf("\nFim do código\n");
     return 0;
