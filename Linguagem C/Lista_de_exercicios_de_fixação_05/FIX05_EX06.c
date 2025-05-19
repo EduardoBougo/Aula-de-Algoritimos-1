@@ -28,7 +28,7 @@ int main() {
     float num[TAM],
         num_prox = 0,
         diferenca = 0,
-        menor_diferenca,
+        menor_diferenca = 0,
         soma = 0,
         media = 0;
 

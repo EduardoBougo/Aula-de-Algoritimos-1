@@ -18,23 +18,49 @@ Enunciado:
 
 #include<stdio.h>
 #include<locale.h>
+#include<stdlib.h>
+#include<time.h>
+#define TAM 20
 
 int main() {
     //Acentuação
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
+    srand(time(NULL));
 
+    int num[TAM],
+        pos_rep[TAM],
+        i = 0;
 
     // Entrada
-
-
-    // Processamento
-
+    for (i = 0; i < TAM; i++) {
+        num[i] = rand() % 100;
+    }
 
     // Saida
+    printf("\n================================================\n");
+    printf("\nPara o conjunto", );
+    for (i = 0; i < TAM; i++) {
+        printf(" - %d", num[i]);
+    }
+    // Processamento
+
+    if()
+    for (i = 0; i < TAM; i++) {
+        if()
+    }
 
 
+
+
+    for (i = 0; i < TAM; i++) {
+        
+    }
+    printf("", );
+
+
+    printf("\n================================================\n");
     printf("\nFim do código\n");
     return 0;
 }
