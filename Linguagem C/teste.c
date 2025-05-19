@@ -3,7 +3,7 @@
 
 int main() {
     int i = 0,
-        num[TAM] = {12};
+        num[TAM] = {};
 
     for (i = 0; i < TAM; i++) {
         printf("%d\n", num[i]);

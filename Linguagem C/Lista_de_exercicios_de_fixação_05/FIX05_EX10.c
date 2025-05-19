@@ -30,34 +30,39 @@ int main() {
     srand(time(NULL));
 
     int num[TAM],
-        pos_rep[TAM],
-        i = 0;
+        aux[TAM],
+        i = 0,
+        j = 0;
+
+    //Zerando o vetor auxiliar
+    for (i = 0; i < TAM; i++) {
+        aux[i] = 0;
+    }
 
     // Entrada
     for (i = 0; i < TAM; i++) {
-        num[i] = rand() % 100;
+        num[i] = rand() % 30;
     }
 
     // Saida
     printf("\n================================================\n");
-    printf("\nPara o conjunto", );
+    printf("\nPara o conjunto");
     for (i = 0; i < TAM; i++) {
         printf(" - %d", num[i]);
     }
     // Processamento
+    for(j = 0; j < TAM-1; j++){
+        for(i = (j + 1); i < TAM; i++){
+            if(num[j] == num[i]){
+                if(aux[] != -1){
+                    aux[j] = -1;
+                    aux[i] = -1;
+                }
 
-    if()
-    for (i = 0; i < TAM; i++) {
-        if()
+            }
+        }
     }
 
-
-
-
-    for (i = 0; i < TAM; i++) {
-        
-    }
-    printf("", );
 
 
     printf("\n================================================\n");
