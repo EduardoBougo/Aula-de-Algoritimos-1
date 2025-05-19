@@ -3,25 +3,25 @@ Nome..: Eduardo Camargo Bougo
 Truma.: EC41F Algoritos 1
 Data..: 19/05/2025
 Enunciado:
-    Faça um programa em Linguagem C que dado o conjunto de temperaturas médias de cada um dos dias do mês (para um mês de trinta dias), apresente:
+    Faï¿½a um programa em Linguagem C que dado o conjunto de temperaturas mï¿½dias de cada um dos dias do mï¿½s (para um mï¿½s de trinta dias), apresente:
 
-    A menor temperatura do mês; 
-    A maior temperatura do mês; 
-    A temperatura média mensal; 
-    O número de dias no mês em que a temperatura foi inferior à média mensal. 
+    A menor temperatura do mï¿½s; 
+    A maior temperatura do mï¿½s; 
+    A temperatura mï¿½dia mensal; 
+    O nï¿½mero de dias no mï¿½s em que a temperatura foi inferior ï¿½ mï¿½dia mensal. 
 */
 
 #include<stdio.h>
 #include<locale.h>
-#include <stdlib.h>
-#include <time.h>
+#include<stdlib.h>
+#include<time.h>
 #define TAM 30
 
 int main() {
-    //Acentuação
+    //Acentuaï¿½ï¿½o
     setlocale(LC_ALL, "Portuguese_Brazil");
     
-    // Declaração de variaveis
+    // Declaraï¿½ï¿½o de variaveis
     srand(time(NULL));
 
     int num[TAM],
@@ -60,11 +60,11 @@ int main() {
         }
     }
     // Saida
-    printf("\nA menor temperatura do mês >>> %d <<<", num[0]);
-    printf("\nA maior temperatura do mês >>> %d <<<", num[TAM-1]);
+    printf("\nA menor temperatura do mï¿½s >>> %d <<<", num[0]);
+    printf("\nA maior temperatura do mï¿½s >>> %d <<<", num[TAM-1]);
     printf("\nA temperatura media mensal foi de >>> %.2f <<<", media);
-    printf("\nO número de dias no mês em que a temperatura foi inferior à média mensal >>> %d <<<", inferior_media);
+    printf("\nO nï¿½mero de dias no mï¿½s em que a temperatura foi inferior ï¿½ mï¿½dia mensal >>> %d <<<", inferior_media);
 
-    printf("\nFim do código\n");
+    printf("\nFim do cï¿½digo\n");
     return 0;
 }
