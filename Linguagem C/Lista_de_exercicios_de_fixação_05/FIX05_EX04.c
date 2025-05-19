@@ -31,10 +31,10 @@ int main() {
 
     // Processamento
     media = soma / TAM;
-        for (i = 0; i < TAM; i++) {
-            if(num[i] < media){
-                cont++;
-            }
+    for (i = 0; i < TAM; i++) {
+        if(num[i] < media){
+            cont++;
+        }
     }
 
     // Saida
