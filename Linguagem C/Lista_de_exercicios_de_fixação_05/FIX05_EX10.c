@@ -1,7 +1,7 @@
 /*
 Nome..: Eduardo Camargo Bougo
 Truma.: EC41F Algoritos 1
-Data..: 13/05/2025
+Data..: 19/05/2025
 Enunciado:
     Faça um programa em Linguagem C que receba um conjunto de 20 números inteiros, verificar se existem números repetidos e em quais posições. As mensagens de saída NÃO precisam estar idênticas, mas os números (valores) sim. O vetor sempre trabalha com as posições de 0 a tamanho - 1. Para melhorar a apresentação, ao mostrar ao usuário, estamos sempre acrescentando +1.
     Casos de teste:
@@ -24,9 +24,17 @@ int main() {
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
+
+
     // Entrada
+
+
     // Processamento
+
+
     // Saida
+
+
     printf("\nFim do código\n");
     return 0;
 }
