@@ -43,8 +43,8 @@ int main() {
     {
         for (j = 0; j < COL; j++)
         {
-            mat_1[i] [j] = rand() % 100;
-            mat_2[i] [j] = rand() % 100;
+            mat_1[i] [j] = (rand() % 100) + 1;
+            mat_2[i] [j] = (rand() % 100) + 1;
         }
     }
     
