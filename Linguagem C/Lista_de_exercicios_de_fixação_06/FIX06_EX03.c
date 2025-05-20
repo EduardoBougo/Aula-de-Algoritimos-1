@@ -43,8 +43,8 @@ int main() {
     {
         for (j = 0; j < COL; j++)
         {
-            mat_1[i] [j] = (rand() % 100) + 1;
-            mat_2[i] [j] = (rand() % 100) + 1;
+            mat_1[i] [j] = rand() % 100;
+            mat_2[i] [j] = rand() % 100;
         }
     }
     
@@ -55,7 +55,7 @@ int main() {
         printf("\n");
         for (j = 0; j < COL; j++)
         {
-            printf("| %3.d |", mat_1[i] [j]);
+            printf("| %3d |", mat_1[i] [j]);
         }
     }
 
@@ -66,7 +66,7 @@ int main() {
         printf("\n");
         for (j = 0; j < COL; j++)
         {
-            printf("| %3.d |", mat_2[i] [j]);
+            printf("| %3d |", mat_2[i] [j]);
         }
     }
 
@@ -87,7 +87,7 @@ int main() {
         printf("\n");
         for (j = 0; j < COL; j++)
         {
-            printf("| %5.d |", multi[i] [j]);
+            printf("| %5d |", multi[i] [j]);
         }
     }
 

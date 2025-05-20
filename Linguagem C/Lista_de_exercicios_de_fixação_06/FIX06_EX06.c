@@ -36,7 +36,7 @@ int main() {
     {
         for (j = 0; j < COL; j++)
         {
-            num[i] [j] = (rand() % 100) + 1;
+            num[i] [j] = rand() % 100;
         }
     }
 
@@ -57,7 +57,7 @@ int main() {
         printf("\n");
         for (j = 0; j < COL; j++)
         {
-            printf("| %3.d |", num[i] [j]);
+            printf("| %3d |", num[i] [j]);
         }
     }
 
@@ -68,7 +68,7 @@ int main() {
     printf("\n-------------sum-------------\n");
     for (i = 0; i < COL; i++)
     {
-        printf("| %3.d |", sum[i]);
+        printf("| %3d |", sum[i]);
     }
     printf("\n\n------------------------------------------------------------------------\n");
 

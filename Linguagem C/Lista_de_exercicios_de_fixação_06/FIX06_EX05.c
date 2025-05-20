@@ -31,7 +31,7 @@ int main() {
     {
         for (j = 0; j < COL; j++)
         {
-            num[i] [j] = (rand() % 100) + 1;
+            num[i] [j] = rand() % 100;
             if (num[i] [j] > num[lin_maior_num] [col_maior_num]){
                 lin_maior_num = i;
                 col_maior_num = j;
@@ -46,7 +46,7 @@ int main() {
         printf("\n");
         for (j = 0; j < COL; j++)
         {
-            printf("| %3.d |", num[i] [j]);
+            printf("| %3d |", num[i] [j]);
         }
     }
 

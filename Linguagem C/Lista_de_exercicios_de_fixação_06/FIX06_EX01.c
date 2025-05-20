@@ -38,7 +38,7 @@ int main() {
         printf("\n");
         for (j = 0; j < COL; j++)
         {
-            printf("| %4.d |", num[i] [j]);
+            printf("| %4d |", num[i] [j]);
         }
     }
 
