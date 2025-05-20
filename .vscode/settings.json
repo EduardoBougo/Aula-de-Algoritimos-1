@@ -3,9 +3,7 @@
     "files.associations": {
         "stdio.h": "c",
         "locale.h": "c",
-        "*.c": "c",
-        "FIX05_EX09.C": "cpp",
-        "FIX05_EX10.C": "cpp"
+        "*.c": "c"
     },
     "[c]": {
         "files.autoGuessEncoding": false,
