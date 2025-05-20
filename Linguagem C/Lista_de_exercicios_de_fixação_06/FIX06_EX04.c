@@ -20,64 +20,41 @@ int main() {
     // Declaração de variaveis
     srand(time(NULL));
 
-    int mat_1[LIN] [COL],
-        mat_2[LIN] [COL],
-        multi[LIN] [COL],
+    int num[LIN] [COL],
         i = 0,
-        j = 0;
+        j = 0,
+        soma = 0;
 
     // Entrada
     for (i = 0; i < LIN; i++)
     {
         for (j = 0; j < COL; j++)
         {
-            mat_1[i] [j] = rand() % 100;
-            mat_2[i] [j] = rand() % 100;
-        }
-    }
-    
-    // mat_1
-    printf("\n\n--------mat_1--------");
-    for (i = 0; i < LIN; i++)
-    {
-        printf("\n");
-        for (j = 0; j < COL; j++)
-        {
-            printf("| %3.d |", mat_1[i] [j]);
+            num[i] [j] = (rand() % 100) + 1;
         }
     }
 
-    // mat_2
-    printf("\n\n--------mat_2--------");
+    // matrix num[][]
+    printf("\n\n------------------num[][]------------------");
     for (i = 0; i < LIN; i++)
     {
         printf("\n");
         for (j = 0; j < COL; j++)
         {
-            printf("| %3.d |", mat_2[i] [j]);
+            printf("| %3.d |", num[i] [j]);
         }
     }
 
     // Processamento
-    // multi
     for (i = 0; i < LIN; i++)
     {
-        for (j = 0; j < COL; j++)
-        {
-            multi[i] [j] = (mat_1[i] [j] * mat_2[i] [j]);
-        }
+        soma += num[i] [i];
     }
 
     // Saida
-    printf("\n\n-----------multi-----------");
-    for (i = 0; i < LIN; i++)
-    {
-        printf("\n");
-        for (j = 0; j < COL; j++)
-        {
-            printf("| %5.d |", multi[i] [j]);
-        }
-    }
+    printf("\n\n------------------------------------------------------------------------\n");
+    printf("\nA soma dos valore da diagonal principal da matriz é >>> %d <<<", soma);
+    printf("\n\n------------------------------------------------------------------------\n");
 
     printf("\nFim do código\n");
     return 0;
