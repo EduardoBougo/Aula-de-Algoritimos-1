@@ -31,6 +31,7 @@ int main() {
 
     int num[TAM],
         aux[TAM],
+        num_aux = 0,
         i = 0,
         j = 0;
 
@@ -40,30 +41,56 @@ int main() {
     }
 
     // Entrada
-    for (i = 0; i < TAM; i++) {
-        num[i] = rand() % 30;
-    }
-
-    // Saida
     printf("\n================================================\n");
     printf("\nPara o conjunto");
-    for (i = 0; i < TAM; i++) {
-        printf(" - %d", num[i]);
-    }
-    // Processamento
-    for(j = 0; j < TAM-1; j++){
-        for(i = (j + 1); i < TAM; i++){
-            if(num[j] == num[i]){
-                if(aux[] != -1){
-                    aux[j] = -1;
-                    aux[i] = -1;
-                }
 
+    for (i = 0; i < TAM; i++) {
+        num[i] = rand() % 10;
+        printf(" - %d", num[i]);
+        aux[i] = i;
+    }
+    printf("\n================================================\n");
+
+    // Processamento
+    printf("a");
+    for(i = 0; i < TAM-1; i++){
+        for(j = (i + 1); j < TAM; j++){
+            if(num[j] < num[i]){
+                //Ordenação
+                num_aux = num[j];
+                num[j] = num[i];
+                num[i] = num_aux;
+
+                //Salvando posição
+                num_aux = aux[j];
+                aux[j] = aux[i];
+                aux[i] = num_aux;
             }
         }
     }
+    printf("a");
+    printf("\n================================================\n");
+    for (i = 0; i < TAM; i++) {
+        printf(" - %d", num[i]);
+    }
+    printf("\n================================================\n");
+    for (i = 0; i < TAM; i++) {
+        printf(" - %d", aux[i]);
+    }
+    
 
-
+/*    for(i = 0; i < TAM-1; i++){
+        for(j = (i + 1); j < TAM; j++){
+            if(num[i] == num[j]){
+                if(aux[j] != -1){
+                    aux[i] = -1;
+                    aux[j] = -1;
+                    printf("- %d", num[j]);
+                }
+            }
+        }
+    }
+*/
 
     printf("\n================================================\n");
     printf("\nFim do código\n");
