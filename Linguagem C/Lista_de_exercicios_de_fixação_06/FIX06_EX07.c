@@ -34,17 +34,33 @@ int main() {
         cont[3] = {0, 0, 0},
         i = 0,
         j = 0;
+    float soma = 0;
 
     // Entrada
     // matrix num[][]
-    printf("\n\n-----------num[][]-----------");
+    printf("\n\n----------------------num[][]----------------------");
     for (i = 0; i < LIN; i++)
     {
         printf("\n");
         for (j = 0; j < COL; j++)
         {
             num[i] [j] = rand() % 3;
-            printf("| %3.d |", num[i] [j]);
+            printf("| %1d |", num[i] [j]);
+            switch (num[i] [j])
+            {
+            case 0:
+                cont[0]++;
+                break;
+            case 1:
+                cont[1]++;
+                soma += 18;
+                break;
+            case 2:
+                cont[2]++;
+                soma += 9;
+            default:
+                break;
+            }
         }
     }
 
@@ -53,9 +69,10 @@ int main() {
 
     // Saida
     printf("\n\n------------------------------------------------------------------------\n");
-    printf("\n%d", cont[0]);
-    printf("\n%d", cont[1]);
-    printf("\n%d", cont[2]);
+    printf("\n%d - poltrona vazia (0)", cont[0]);
+    printf("\n%d - pagante inteira (1)", cont[1]);
+    printf("\n%d - pagante meia (2)", cont[2]);
+    printf("\nO valor apurado na sessão foi de R$ %.2f", soma);
     printf("\n\n------------------------------------------------------------------------\n");
 
     printf("\nFim do código\n");
