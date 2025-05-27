@@ -2,14 +2,11 @@
 #define TAM 4
 
 int main() {
-    int i = 0,
-        num[TAM] = {};
+    char nome[232423];
 
-    for (i = 0; i < TAM; i++) {
-        scanf("%d", &num[i]);
-    }
-    for (i = 0; i < TAM; i++) {
-        printf("%d\n", num[i]);
-    }
+    printf("Digite seu nome bb: ");
+    fgets(nome, 232423, stdin);
+
+    printf("Nossa! %s Que nome bonito gatinho\n", nome);
     return 0;
 }
