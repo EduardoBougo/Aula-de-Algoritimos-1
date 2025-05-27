@@ -20,29 +20,35 @@ int main() {
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
-    int i = 0;
+    int i = 0,
+        cont = 0;
 
     char frase[TAM],
         caracter = ' ';
 
     // Entrada
-    printf("Entrada: ");
+    printf("Frase: ");
 
     fgets(frase, TAM, stdin);
     frase[strlen(frase) - 1] = "\0";     //Retira o '\n' do vetor char
 
+    printf("Caracter desejado: ");
+    scanf("%c", &caracter);
+
     // Processamento
-    for (i = 0; i < strlen; i++)
+    for (i = 0; i < strlen(frase); i++)
     {
-        /* code */
+        if(frase[i] == caracter){
+            cont++;
+        }
     }
     
 
     //Saida
-    printf("Saida:\n");
+    printf("\nSaida:");
     
 
-    printf("\nO caractere >> %c << aparece %d vezes na frase", , );
+    printf("\nO caractere >> %c << aparece %d vezes na frase", caracter, cont);
 
     printf("\nFim do código\n");
     return 0;
