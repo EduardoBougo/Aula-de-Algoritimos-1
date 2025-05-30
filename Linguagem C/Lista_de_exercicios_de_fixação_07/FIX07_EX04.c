@@ -21,7 +21,8 @@ int main() {
     
     // Declaração de variaveis
     int i = 0,
-        cont = 0;
+        cont = 0,
+        k = 0;
 
     char frase[TAM],
         caracter = ' ';
@@ -30,13 +31,14 @@ int main() {
     printf("Frase: ");
 
     fgets(frase, TAM, stdin);
-    frase[strlen(frase) - 1] = "\0";     //Retira o '\n' do vetor char
+    frase[strlen(frase) - 1] = '\0';     //Retira o '\n' do vetor char
 
     printf("Caracter desejado: ");
     scanf("%c", &caracter);
 
     // Processamento
-    for (i = 0; i < strlen(frase); i++)
+    k = strlen(frase);
+    for (i = 0; i < k; i++)
     {
         if(frase[i] == caracter){
             cont++;

@@ -3,11 +3,11 @@ Nome..: Eduardo Camargo Bougo
 Truma.: EC41F Algoritos 1
 Data..: 27/05/2025
 Enunciado:
-    Faça um programa em Linguagem C que receba uma string e depois um caractere, e retorne o número de vezes que esse caracter aparece na string.
+    Faça um programa em Linguagem C que receba o seu nome completo e apresente quantas LETRAS tem seu nome. Aqui, precisa descontar a quantidade de espaços.
 
     Exemplo:
-    Entrada: Um sorriso e um bom dia ajuda a melhorar a vida de todo mundo         r
-    Saída: O caractere >> r << aparece 4 vezes na frase.
+    Entrada: Joaquim Pereira da Silva
+    Saída: Seu nome tem 21 letras.
 */
 
 #include<stdio.h>
@@ -21,34 +21,29 @@ int main() {
     
     // Declaração de variaveis
     int i = 0,
-        cont = 0;
+        cont = 0,
+        k = 0;
 
-    char frase[TAM],
-        caracter = ' ';
+    char entrada[TAM];
 
     // Entrada
-    printf("Frase: ");
+    printf("Entrada: ");
 
-    fgets(frase, TAM, stdin);
-    frase[strlen(frase) - 1] = "\0";     //Retira o '\n' do vetor char
-
-    printf("Caracter desejado: ");
-    scanf("%c", &caracter);
+    fgets(entrada, TAM, stdin);
+    entrada[strlen(entrada) - 1] = '\0';     //Retira o '\n' do vetor char
 
     // Processamento
-    for (i = 0; i < strlen(frase); i++)
+    k = strlen(entrada);
+    for (i = 0; i < k; i++)
     {
-        if(frase[i] == caracter){
+        if(entrada[i] == ' '){
             cont++;
         }
     }
-    
 
     //Saida
     printf("\nSaida:");
-    
-
-    printf("\nO caractere >> %c << aparece %d vezes na frase", caracter, cont);
+    printf("\nSaída: Seu nome tem %d letras.",(strlen(entrada) - cont));
 
     printf("\nFim do código\n");
     return 0;
