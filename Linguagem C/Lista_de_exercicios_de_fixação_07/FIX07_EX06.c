@@ -1,7 +1,7 @@
 /*
 Nome..: Eduardo Camargo Bougo
 Truma.: EC41F Algoritos 1
-Data..: 27/05/2025
+Data..: 31/05/2025
 Enunciado:
     Faça um programa em Linguagem C que receba o nome de usuário e sua senha de acesso a um sistema. Se o usuário for ?joao? e a senha for 123, permita o acesso. Caso contrário, dê uma mensagem de ACESSO NEGADO
 
@@ -19,37 +19,44 @@ Enunciado:
 #include<stdio.h>
 #include<locale.h>
 #include<string.h>
-#define TAM 1000
+#define TAM 100
 
 int main() {
     //Acentuação
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
-    int i = 0,
-        cont = 0,
-        k = 0;
+    char input_username[TAM],
+         input_password[TAM],
+         user[] = {"joao"},
+         password[] = {"123"},
+         linha[] = {"\n======================================\n"};
 
-    char entrada[TAM];
+
 
     // Entrada
-    printf("Entrada: ");
+    puts(linha);
 
-    fgets(entrada, TAM, stdin);
-    entrada[strlen(entrada) - 1] = '\0';     //Retira o '\n' do vetor char
+    //Usuario
+    printf("Usuário: ");
+    fgets(input_username, TAM, stdin);
+    input_username[strlen(input_username) - 1] = '\0';
+
+    //Senha
+    printf("Senha..: ");
+    fgets(input_password, TAM, stdin);
+    input_password[strlen(input_password) - 1] = '\0';
+
+    puts(linha);
 
     // Processamento
-    k = strlen(entrada);
-    for (i = 0; i < k; i++)
-    {
-        if(entrada[i] == ' '){
-            cont++;
-        }
+    if(!strcmp(input_username, user) && !strcmp(input_password, password)){
+        printf("ACESSO PERMITIDO\n");
+        printf("Seja bem vindo %s\n", user);
     }
-
-    //Saida
-    printf("\nSaida:");
-    printf("\nSaída: Seu nome tem %d letras.",(strlen(entrada) - cont));
+    else{
+        printf("ACESSO NEGADO!\n");
+    }
 
     printf("\nFim do código\n");
     return 0;
