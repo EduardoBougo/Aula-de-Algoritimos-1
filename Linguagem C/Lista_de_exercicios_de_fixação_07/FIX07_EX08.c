@@ -21,11 +21,11 @@ int main() {
     
     // Declaração de variaveis
     char input[TAM],
-         linha[] = {"\n======================================\n"};
+         linha[] = {"\n======================================"};
 
     int i = 0,
         k = 0,
-        cont = 0;
+        pos_esp = 0;
 
 
     // Entrada
@@ -39,17 +39,21 @@ int main() {
 
     // Processamento
     k = strlen(input);
+
+    for(i = k; input[i] != ' '; i--){    //Retira os espaços no final da string
+        input[i] = '\0';
+    }
+
     for(i = 0; i < k; i++){
         if(input[i] == ' '){
-            cont++;
-        }
-    }
-    for(i = 0; i < k; i++){
-        if(input[i] == '-'){
-            input[i] = ' ';
+            pos_esp = i;
         }
     }
 
+    input[pos_esp] = '\0';    //Descarta a ultima palavra
+
+    strcat(input, " XPTO");
+    
     printf("\nSaída: ");
     puts(input);
 
