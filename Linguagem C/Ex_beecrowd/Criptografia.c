@@ -38,6 +38,7 @@ int main() {
 
     // Entrada
     scanf("%d", &lin);
+    getchar();
 
     for(cont = 0; cont < lin; cont++){
         fgets(input, TAM, stdin);
