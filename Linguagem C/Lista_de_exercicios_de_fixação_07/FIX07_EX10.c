@@ -33,7 +33,7 @@ int main() {
         fgets(matrix[i], TAM, stdin);
         matrix[i][strlen(matrix[i]) - 1] = '\0';
     }
-
+aa
     puts(linha);
 
     // Processamento
