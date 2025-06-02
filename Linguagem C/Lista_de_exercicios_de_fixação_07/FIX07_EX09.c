@@ -44,12 +44,12 @@ int main() {
         printf("%s == %s", input_1, input_2);
     }
     if(i < 0){
-        printf("%s %s",input_1, input_2);
+        printf("%s, %s\n",input_1, input_2);
     }
     if(i > 0){
-        printf("%s %s",input_2, input_1);
+        printf("%s, %s\n",input_2, input_1);
     }
-    
+    printf("%d", i);
 
     printf("\nFim do código\n");
     return 0;
