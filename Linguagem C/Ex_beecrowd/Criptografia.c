@@ -26,15 +26,14 @@ int main() {
     setlocale(LC_ALL, "Portuguese_Brazil");
     
     // Declaração de variaveis
-    char input[TAM];
+    char input[TAM],
+         aux = ' ';
 
     int i = 0,
         j = 0,
         cont = 0,
         lin = 0,
-        k = 0,
-        aux = 0,
-        dec[TAM];
+        k = 0;
 
     // Entrada
     scanf("%d", &lin);
@@ -44,36 +43,26 @@ int main() {
         fgets(input, TAM, stdin);
         input[strlen(input) - 1] = '\0';
 
-        //Transformando o char em decimal
         k = strlen(input);
-
-        for(i = 0; i < k; i++){
-            dec[i] = (input[i] - 0);
-        }
 
         //Criptografia
         // 1°Passo
         for(i = 0; i < k; i++){
-            if(((65 <= dec[i]) && (dec[i] <= 90)) || ((97 <= dec[i]) && (dec[i] <= 122))){
-                dec[i] += 3;
+            if((('A' <= input[i]) && (input[i] <= 'Z')) || (('a' <= input[i]) && (input[i] <= 'z'))){
+                input[i] += 3;
             }
         }
 
         // 2°Passo
         for(i = 0, j = (k - 1); i <j; i++, j--){
-            aux = dec[j];
-            dec[j] = dec[i];
-            dec[i] = aux;
+            aux = input[j];
+            input[j] = input[i];
+            input[i] = aux;
         }
 
         // 3°Passo
         for(i = (k / 2); i < k; i++){
-            dec[i] -= 1;
-        }
-
-        // Transformando o decimal em char
-        for(i = 0; i < k; i++){
-            input[i] = dec[i];
+            input[i] -= 1;
         }
 
         // Saida
