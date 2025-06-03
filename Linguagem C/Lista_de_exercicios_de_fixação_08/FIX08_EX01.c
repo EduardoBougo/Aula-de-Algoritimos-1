@@ -3,7 +3,7 @@ Nome..: Eduardo Camargo Bougo
 Truma.: EC41F Algoritos 1
 Data..: 03/06/2025
 Enunciado:
-    FaÃ§a um programa em Linguagem C que escreva uma funÃ§Ã£o para receber um nÃºmero e retornar o valor absoluto deste nÃºmero (a funÃ§Ã£o sempre retorna um valor positivo).
+    Faça um programa em Linguagem C que escreva uma função para receber um número e retornar o valor absoluto deste número (a função sempre retorna um valor positivo).
 */
 
 #include<stdio.h>
@@ -12,10 +12,10 @@ Enunciado:
 float modulo(float num);
 
 int main() {
-    //AcentuaÃ§Ã£o
+    //Acentuação
     setlocale(LC_ALL, "Portuguese_Brazil");
     
-    // DeclaraÃ§Ã£o de variaveis
+    // Declaração de variaveis
     float input = 0,
           output = 0;
 
@@ -27,9 +27,9 @@ int main() {
     output = modulo(input);
 
     // Saida
-    printf("O valor absoluto de %f, Ã© >>> %.2f <<<", input, output);
+    printf("O valor absoluto de %.2f, é >>> %.2f <<<", input, output);
 
-    printf("\nFim do cÃ³digo\n");
+    printf("\nFim do código\n");
     return 0;
 }
 
