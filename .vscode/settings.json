@@ -3,7 +3,8 @@
     "files.associations": {
         "stdio.h": "c",
         "locale.h": "c",
-        "*.c": "c"
+        "*.c": "c",
+        "string.h": "c"
     },
     "[c]": {
         "files.autoGuessEncoding": false,
