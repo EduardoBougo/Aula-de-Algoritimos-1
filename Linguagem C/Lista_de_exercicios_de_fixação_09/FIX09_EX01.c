@@ -13,15 +13,13 @@ struct Data{
     int dia;
     int mes;
     int ano;
-}dt; // Declaração de variaveis
+} dt; // Declaração de variaveis
 
-char dataFormatada(struct Data dt);
+void dataFormatada(struct Data dt);
 
 int main() {
     //Acentuação
     setlocale(LC_ALL, "Portuguese_Brazil");
-    
-    // Declaração de variaveis
 
     // Entrada
     printf("Digite o dia: ");
@@ -33,17 +31,13 @@ int main() {
     printf("Digite o ano: ");
     scanf("%d", &dt.ano);
 
-    // Processamento
-
-
-    // Saida
-    printf("| %s |", dataFormatada);
+    // Processamento e Saida
+    dataFormatada(dt);
 
     printf("\nFim do código\n");
     return 0;
 }
 
 void dataFormatada (struct Data dt){
-    char str[] = {"%02d/%02d/%4d", dt.dia, dt.mes, dt.ano};
-    printf("%s", str);
+    printf("%02d/%02d/%4d", dt.dia, dt.mes, dt.ano);
 }
