@@ -8,6 +8,7 @@ Enunciado:
 
 #include<stdio.h>
 #include<locale.h>
+#include<string.h>
 
 struct Data{
     int dia;
@@ -15,11 +16,13 @@ struct Data{
     int ano;
 } dt; // Declaração de variaveis
 
-void dataFormatada(struct Data dt);
+void dataFormatada(struct Data dt, char data[]);
 
 int main() {
     //Acentuação
     setlocale(LC_ALL, "Portuguese_Brazil");
+
+    char data[12];
 
     // Entrada
     printf("Digite o dia: ");
@@ -31,13 +34,16 @@ int main() {
     printf("Digite o ano: ");
     scanf("%d", &dt.ano);
 
-    // Processamento e Saida
-    dataFormatada(dt);
+    // Processamento
+    dataFormatada(dt, data);
+
+    // Saida
+    printf("\nData formatada: %s", data);
 
     printf("\nFim do código\n");
     return 0;
 }
 
-void dataFormatada (struct Data dt){
-    printf("%02d/%02d/%4d", dt.dia, dt.mes, dt.ano);
+void dataFormatada (struct Data dt, char data[]){
+    sprintf(data, "%02d/%02d/%04d", dt.dia, dt.mes, dt.ano);
 }
