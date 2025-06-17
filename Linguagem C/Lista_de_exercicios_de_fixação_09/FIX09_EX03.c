@@ -18,7 +18,7 @@ struct Data{
 } dt; // Declaração de variaveis
 
 void mostrarData(struct Data dt);
-void mostrarMesPorExtenso(struct Data dt, char mesExtenso[]);
+void mostrarDataPorExtenso(struct Data dt);
 
 int main() {
     //Acentuação
@@ -36,70 +36,17 @@ int main() {
 
     // Processamento e Saida
     mostrarData(dt);
+    mostrarDataPorExtenso(dt);
 
     printf("\nFim do código\n");
     return 0;
 }
 
-void mostrarMesPorExtenso (struct Data dt, char mesExtenso[]){
-    switch (dt.mes)
-    {
-    case 1:
-        strcpy(mesExtenso, "Janeiro");
-        break;
-        
-    case 2:
-        strcpy(mesExtenso, "Fevereiro");
-        break;
-        
-    case 3:
-        strcpy(mesExtenso, "Março");
-        break;
-
-    case 4:
-        strcpy(mesExtenso, "Abril");
-        break;
-            
-    case 5:
-        strcpy(mesExtenso, "Maio");
-        break;
-        
-    case 6:
-        strcpy(mesExtenso, "Junho");
-        break;
-        
-    case 7:
-        strcpy(mesExtenso, "Julho");
-        break;
-        
-    case 8:
-        strcpy(mesExtenso, "Agosto");
-        break;
-        
-    case 9:
-        strcpy(mesExtenso, "Setembro");
-        break;
-        
-    case 10:
-        strcpy(mesExtenso, "Outubro");
-        break;
-
-    case 11:
-        strcpy(mesExtenso, "Novembro");
-        break;
-        
-    case 12:
-        strcpy(mesExtenso, "Dezembro");
-        break;
-
-    default:
-        break;
-    }
+void mostrarDataPorExtenso (struct Data dt){
+    char meses[12][10] = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
+    printf("\nExemplo de saida: |%02d de %s de %04d|\n", dt.dia, meses[dt.mes - 1], dt.ano);
 }
 
 void mostrarData (struct Data dt){
-    char mesExtenso[10];
-
-    mostrarMesPorExtenso(dt, mesExtenso);
-    printf("\nExemplo de saida: |%02d de %s de %04d|\n", dt.dia, mesExtenso, dt.ano);
+    printf("\nExemplo de saida: |%02d/%02d/%04d|\n", dt.dia, dt.mes, dt.ano);
 }
