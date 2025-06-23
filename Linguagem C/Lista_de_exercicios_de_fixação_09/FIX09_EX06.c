@@ -25,8 +25,7 @@ void receberData(struct Data *dt); // Recebe os dados da Data
 int validarData(struct Data dt); // Validar se a data é valida -- Dia(1 a 28, 29, 30 ou 31) -- Mês(1 a 12) -- Ano(1900 a 2025)
 int anoBissexto(int ano); // Verifica se o ano é Bissexto -- 1 Verdadeiro -- 0 Falso
 int numDiasEmData(struct Data dt);
-int diferencaEmDias(struct Data dt_1, struct Data dt_2);
-
+int diferencaEmDias(int dias_1, int dias_2);
 
     int diasEmCadaMesPadrao[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
@@ -46,6 +45,12 @@ int main() {
     printf("\n%d ", numDiasEmData(dt[0]));
     printf("\n%d ", numDiasEmData(dt[1]));
 
+    printf("\nA diferença entre ");
+    mostrarData(dt[0]);
+    printf(" e ");
+    mostrarData(dt[1]);
+    printf(" é igual a %d dias\n", diferencaEmDias(numDiasEmData(dt[0]), numDiasEmData(dt[1])));
+
     printf("\nFim do código\n");
     return 0;
 }
@@ -55,7 +60,7 @@ void linha (void){
 }
 
 void mostrarData (struct Data dt){
-    printf("\nExemplo de saida: |%02d/%02d/%04d|\n", dt.dia, dt.mes, dt.ano);
+    printf("|%02d/%02d/%04d|", dt.dia, dt.mes, dt.ano);
 }
 
 void mostrarDataPorExtenso (struct Data dt){
@@ -78,6 +83,7 @@ void mostrarDataPorExtenso (struct Data dt){
 
 
 void receberData (struct Data *dt){
+    int validar = 0;
     do
     {
         linha();
@@ -90,7 +96,13 @@ void receberData (struct Data *dt){
         printf("Digite o ano: ");
         scanf("%d", &dt->ano);
         linha();
-    } while ( !validarData(*dt) );
+
+        validar = (!validarData(*dt));
+        if(validar){
+            printf("\nData Invalida! Porfavor digite novmente.\n");
+        }
+
+    } while ( validar );
 }
 
 int validarData (struct Data dt){
@@ -115,22 +127,6 @@ int validarData (struct Data dt){
 
     return 1; // Retornar verdadeiro(1) pois a data é Valida
 
-    /*
-    if (anoBissexto(dt.ano) && (dt.mes == 2)){ // Se o ano for Bissexto e for Fevereiro
-        diasEmCadaMes[1] = 29; // O número de dias será de 29 dias
-    }
-
-    if((dt.ano < 1900) || (dt.ano > 2025)){ // Testando se a Data é Invalida
-        return 1;
-    }
-    if((dt.mes < 1) || (dt.mes > 12)){ // Testando se a Data é Invalida
-        return 1;
-    }
-    if((dt.dia < 1) || (dt.dia > diasEmCadaMes[dt.mes - 1])){ // Testando se a Data é Invalida
-        return 1;
-    }
-    return 0; // Retornar verdadeiro(1) pois a data é Valida
-    */
 }
 
 int anoBissexto (int ano){ // Testando anos bissextos
@@ -163,3 +159,14 @@ int numDiasEmData(struct Data dt){
     return totalDias;
 }
 
+int diferencaEmDias(int dias_1, int dias_2){
+    int diferenca = 0;
+
+    diferenca = dias_1 - dias_2;
+
+    if (diferenca < 0){
+        diferenca *= (-1);
+    }
+
+    return diferenca;
+}
