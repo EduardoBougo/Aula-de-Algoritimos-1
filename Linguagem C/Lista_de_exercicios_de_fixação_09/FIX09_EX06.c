@@ -1,7 +1,7 @@
 /*
 Nome..: Eduardo Camargo Bougo
 Truma.: EC41F Algoritos 1
-Data..: 17/06/2025
+Data..: 17/06/2025 até 23/06/2025
 Enunciado:
     Construa uma função que recebe 2 (duas) datas como parâmetro (struct) e retorne um inteiro representando a diferença (em dias) entre as duas datas. Faça um programa em Linguagem C que demostre o uso desta função.
 */
