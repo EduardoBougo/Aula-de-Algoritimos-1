@@ -1,33 +1,51 @@
-#include <stdio.h>
-#include<string.h>
-#define TAM 100
+#include<stdio.h>
+#include<locale.h>
+#define N_DATAS 2
+
+struct Data
+{
+    int dia;
+    int mes;
+    int ano;
+};
+
+struct Data receberData(void);
+void mostrarData(struct Data dt);
+
+struct Data dt[5], dataNiver;
+
 int main() {
+    //Acentuação
+    setlocale(LC_ALL, "Portuguese_Brazil");
+    
  
-    int leds[] = {6, 2, 5, 5, 4, 5, 6, 3, 7, 6},
-        i = 0,
-        j = 0,
-        k = 0,
-        soma = 0,
-        N = 0;
-        
-    char num[TAM];
-    
-    scanf("%d", &N);
-    getchar();
-    
-    for(i = 0; i < N; i++){
-        fgets(num, TAM, stdin);
-        num[strlen(num) - 1] = '\0';
-        
-        soma = 0;
-        
-        k = strlen(num);
-        
-        for(j = 0; num[j] != '\0'; j++){
-                soma += leds[(num[j] - 0)];  
-        }
-        printf("%d leds\n", soma);
-    }
-    
+
+
+
+    dt[0] = receberData();
+    dt[1] = receberData();
+
+    mostrarData(dt[0]);
+    mostrarData(dt[1]);
+
+    printf("\nFim do código\n");
     return 0;
+}
+
+struct Data receberData (void){
+    struct Data dt;
+    printf("Digite o dia: ");
+    scanf("%d", &dt.dia);
+
+    printf("Digite o mês: ");
+    scanf("%d", &dt.mes);
+
+    printf("Digite o ano: ");
+    scanf("%d", &dt.ano);
+
+    return dt;
+}
+
+void mostrarData (struct Data dt){
+    printf("|%02d/%02d/%04d|", dt.dia, dt.mes, dt.ano);
 }
