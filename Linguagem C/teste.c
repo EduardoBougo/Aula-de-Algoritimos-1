@@ -1,51 +1,27 @@
 #include<stdio.h>
 #include<locale.h>
-#define N_DATAS 2
 
-struct Data
+struct ponto
 {
-    int dia;
-    int mes;
-    int ano;
+    float x;
+    float y;
 };
 
-struct Data receberData(void);
-void mostrarData(struct Data dt);
-
-struct Data dt[5], dataNiver;
+struct ponto p1 = {1, 1};
+struct ponto p2 = {2, 2};
 
 int main() {
     //Acentuação
     setlocale(LC_ALL, "Portuguese_Brazil");
-    
- 
 
 
+    p1 = p2;
 
-    dt[0] = receberData();
-    dt[1] = receberData();
-
-    mostrarData(dt[0]);
-    mostrarData(dt[1]);
+    printf("%.2f - %.2f\n", p1.x, p1.y);
+    printf("%.2f - %.2f\n", p2.x, p2.y);
 
     printf("\nFim do código\n");
     return 0;
 }
 
-struct Data receberData (void){
-    struct Data dt;
-    printf("Digite o dia: ");
-    scanf("%d", &dt.dia);
 
-    printf("Digite o mês: ");
-    scanf("%d", &dt.mes);
-
-    printf("Digite o ano: ");
-    scanf("%d", &dt.ano);
-
-    return dt;
-}
-
-void mostrarData (struct Data dt){
-    printf("|%02d/%02d/%04d|", dt.dia, dt.mes, dt.ano);
-}
