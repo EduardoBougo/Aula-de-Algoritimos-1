@@ -1,6 +1,6 @@
 /*
 Nome..: Eduardo Camargo Bougo
-Truma.: EC42A Algoritos 2
+Truma.: EC41F Algoritos 1
 Data..: 00/00/2025
 Enunciado:
 
